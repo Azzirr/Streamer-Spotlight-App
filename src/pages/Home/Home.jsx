@@ -1,12 +1,10 @@
-import SubmissionForm from "../../components/SubmissionForm/SubmissionForm"
-import { useStreamers } from "../../hooks/useStreamers"
+import StreamersList from "../../components/StreamersList/StreamersList";
+import SubmissionForm from "../../components/SubmissionForm/SubmissionForm";
 export default function Home(){
-    const getStreamers  = useStreamers();
     return(
         <>
-            {getStreamers.map((streamer, index) => (
-                <p key={index}>{streamer.user}</p>
-            ))}
+            <SubmissionForm></SubmissionForm>
+            <StreamersList></StreamersList>
         </>
     )
 }

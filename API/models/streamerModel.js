@@ -20,7 +20,8 @@ const streamerSchema = mongoose.Schema(
         },
         image: {
             type: String,
-            required: [true, 'Please add image']
+            required: [true, 'Please add image'],
+            default: 'https://soccerpointeclaire.com/wp-content/uploads/2021/06/default-profile-pic-e1513291410505.jpg'
         }
     },
     {
