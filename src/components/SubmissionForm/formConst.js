@@ -4,8 +4,8 @@ export const formInputs = [
         name: "name",
         type: "text",
         placeholder: "Streamer username",
-        errorMessage: "Streamer username should be 2-20 characters and shouldn't include any special character!",
-        pattern: "^[A-Za-z0-9]{2,20}$",
+        errorMessage: "Streamer username should be 2-20 characters and shouldn't include any special character except: ., _ and space!",
+        pattern: "^[A-Za-z0-9._ ]{2,20}$",
         required: true
     },
     {

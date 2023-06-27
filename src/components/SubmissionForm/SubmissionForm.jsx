@@ -1,15 +1,18 @@
 import FormInput from "./FormInput";
 import FormDropdown from "./FormDropdown";
 import { useState } from "react";
-import { formInputs, formDropdownOptions } from './formConst';
+import { formInputs, formDropdownOptions } from "./formConst";
+import { useStreamers } from "../../hooks/useStreamers";
 import axios from 'axios';
+
 export default function SubmissionForm(){
+    const fetchStreamers = useStreamers();
+
     const [streamerData, setStreamerData] = useState({
         name: '',
         streamingPlatform: '',
         description: ''
     });
-
     function onDataChange(event){
         setStreamerData({...streamerData, [event.target.name]: event.target.value })
     }
@@ -25,10 +28,11 @@ export default function SubmissionForm(){
         event.preventDefault();
         axios.post('http://localhost:4700/streamers', streamerData).then(
             alert('Streamer succesfully added to list!')
+        ).then(
+            fetchStreamers()
         );
     }
 
-    console.log(streamerData)
     return(
         <form onSubmit={handleSubmit}>
             {formInputs.map((input) => (

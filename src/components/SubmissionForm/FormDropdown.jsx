@@ -7,7 +7,6 @@ export default function FormDropdown(props) {
     function handleFocus(event){
         setFocused(true);
     }
-
     
   return (
     <div>

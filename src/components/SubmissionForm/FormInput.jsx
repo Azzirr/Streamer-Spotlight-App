@@ -7,6 +7,7 @@ export default function FormInput(props){
     function handleFocus(event){
         setFocused(true);
     }
+    
     return(
         <div className="inputFormComponent">
             <input {...formInputs} onBlur={handleFocus} focused={focused.toString()}/>
