@@ -13,7 +13,8 @@ export const formInputs = [
         name: "description",
         type: "textarea",
         placeholder: "Description",
-        errorMessage: "Description must be max 80 characters!"
+        errorMessage: "Description should be maximum 150 characters!",
+        pattern: "^.{1,150}$"
     }
 ];
 export const formDropdownOptions = [

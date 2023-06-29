@@ -9,11 +9,11 @@ export default function FormDropdown(props) {
     }
     
   return (
-    <div>
-        <select onChange={onChange} onBlur={handleFocus} focused={focused.toString()} required>
-        <option value="">Select...</option>
+    <div className="dropdown">
+        <select className="dropdown-content" onChange={onChange} onBlur={handleFocus} focused={focused.toString()} required>
+        <option className="dropdown-option" value="">Select...</option>
         {options.map((option) => (
-            <option key={option.id} value={option.name}>
+            <option className="dropdown-content" key={option.id} value={option.name}>
             {option.name}
             </option>
         ))}

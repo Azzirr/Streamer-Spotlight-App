@@ -1,0 +1,24 @@
+.details-button-style{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+}
+.details-button-style:hover{
+    background-color: #f2f2f2e6;
+}
+.App-style-for-details{
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}

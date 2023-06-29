@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../SubmissionForm/style.css';
 export default function FormInput(props){
     const {errorMessage, ...formInputs} = props;
     const [focused, setFocused] = useState(false);

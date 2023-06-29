@@ -41,7 +41,7 @@ export default function SubmissionForm(){
             <p>Select platform:</p>
             <FormDropdown onChange={onDropdownChange} options={formDropdownOptions} />
             <div>
-                <button className="">Submit</button>
+                <button className="buttonStyle">Submit</button>
             </div>
         </form>
     )

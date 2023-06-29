@@ -8,12 +8,16 @@ export const useStreamers = () => {
     const dispatch = useDispatch();
 
     async function fetchStreamers(){
-        const response = await axios.get(
-            'http://localhost:4700/streamers'
-        );
-        if(response && response.data){
-            setStreamers(response.data)
-            dispatch(saveStreamersToState(response.data))
+        try {
+            const response = await axios.get(
+                'http://localhost:4700/streamers'
+            );
+            if(response && response.data){
+                setStreamers(response.data)
+                dispatch(saveStreamersToState(response.data))
+            }
+        } catch (error) {
+            return error
         }
     }
 

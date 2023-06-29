@@ -6,8 +6,78 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.App-style {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.inputFormComponent{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+}
+input{
+  padding: 20px;
+  border-radius: 10px;
+  margin: 10px
+}
+input:invalid[focused="true"]{
+  border: 2px solid #ff0000;
+}
+input:invalid[focused="true"] ~ span{
+  display: block;
+}
+select:invalid[focused="true"]{
+  border: 2px solid #ff0000;
+}
+select:invalid[focused="true"] ~ span{
+  display: block;
+}
+.error{
+  font-size: 13px;
+  color: #ff0000;
+  display: none;
+}
+.buttonStyle{
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 150px;
+  margin-left: 25%;
+}
+.buttonStyle:hover {
+  background-color: #f2f2f2e6;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+.dropdown-content {
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  width: 280px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}  
+.dropdown-option {
+  cursor: pointer;
+  padding: 5px;
 }
