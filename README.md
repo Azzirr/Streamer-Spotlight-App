@@ -6,7 +6,7 @@ This project is my attempt for creating fully working fullstack app. App include
 ## Tech stack
 - React and React Router
 - Redux
-- ExpressJS framework on NodeJS enviroment
+- ExpressJS framework on NodeJS environment
 - MongoDB as a database
 
 ## To run this project locally
