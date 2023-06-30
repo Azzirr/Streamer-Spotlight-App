@@ -1,3 +1,4 @@
+import './style.css'
 import { useNavigate } from "react-router-dom";
 
 export default function PageNotFound(){
@@ -5,7 +6,7 @@ export default function PageNotFound(){
     return(
         <div className="App-style">
             <header>Page not found</header>
-            <button className='buttonStyle' onClick={() => {navigate('/')}}>Return to homepage</button>
+            <button className='buttonStyleFor404' onClick={() => {navigate('/')}}>Return to homepage</button>
         </div>
     )
 }
