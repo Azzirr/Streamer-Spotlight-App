@@ -26,11 +26,13 @@ export default function SubmissionForm(){
 
     function handleSubmit(event){
         event.preventDefault();
-        axios.post('http://localhost:4700/streamers', streamerData).then(
-            alert('Streamer succesfully added to list!')
-        ).then(
+        axios.post('http://localhost:4700/streamers', streamerData).then(() => {
+            alert('Streamer succesfully added to list!');
             fetchStreamers()
-        );
+            }
+        ).catch((error) => {
+            alert('An error ocurred. Check server connection.', error);
+        })
     }
 
     return(

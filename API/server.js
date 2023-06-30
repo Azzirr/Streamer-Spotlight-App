@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 require('dotenv').config();
-const corsMiddleware = require('./corsMiddleware');
 const streamersRoutes = require('./streamers_routes/routes');
 
 app.use((req, res, next) => {

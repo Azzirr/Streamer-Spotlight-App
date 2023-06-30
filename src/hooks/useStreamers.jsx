@@ -7,19 +7,17 @@ export const useStreamers = () => {
     const [streamers, setStreamers] = useState([{}]);
     const dispatch = useDispatch();
 
-    async function fetchStreamers(){
-        try {
-            const response = await axios.get(
-                'http://localhost:4700/streamers'
-            );
-            if(response && response.data){
-                setStreamers(response.data)
-                dispatch(saveStreamersToState(response.data))
+    function fetchStreamers() {
+        return axios.get('http://localhost:4700/streamers')
+          .then(response => {
+            if (response && response.data) {
+              setStreamers(response.data);
+              dispatch(saveStreamersToState(response.data));
             }
-        } catch (error) {
-            return error
-        }
-    }
+          }).catch((error) => {
+            return error;
+          });
+      }
 
     useEffect(() => {
         fetchStreamers();

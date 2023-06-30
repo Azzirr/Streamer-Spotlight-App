@@ -5,7 +5,8 @@ const streamerSchema = mongoose.Schema(
     {
         name: {
             type: String,
-            required: [true, 'Please enter streamer name']
+            required: [true, 'Please enter streamer name'],
+            maxlength: [20, 'Maximum length is 20 characters']
         },
         streamingPlatform: {
             type: String,
@@ -13,7 +14,8 @@ const streamerSchema = mongoose.Schema(
         },
         description: {
             type: String,
-            required: [false]
+            required: [false],
+            maxlength: [150, 'Maximum length is 150 characters']
         },
         votes: {
             type: Number,
@@ -22,7 +24,7 @@ const streamerSchema = mongoose.Schema(
         image: {
             type: String,
             required: [true, 'Please add image'],
-            default: 'https://soccerpointeclaire.com/wp-content/uploads/2021/06/default-profile-pic-e1513291410505.jpg'
+            default: setImage.staticImages.defaultAvatarImage
         },
         streamingPlatformImage: {
             type: String,
