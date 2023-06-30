@@ -8,7 +8,7 @@ export default function StreamerDetails(){
         <div>
             <p>Name: {streamerDetails.name}</p>
             <span>Description: <p className='description-font-size wrap-text'>{streamerDetails.description}</p></span>
-            <p>Platform: <img src={streamerDetails.streamingPlatformImage} alt={streamerDetails.streamingPlatform} width={50} height={50}></img></p>
+            <p>Platform: <img className='image-down' src={streamerDetails.streamingPlatformImage} alt={streamerDetails.streamingPlatform} width={50} height={50}></img></p>
             <img className='image-center' src={streamerDetails.image} alt={streamerDetails.name} width={250} height={250}></img>
         </div>
     )
