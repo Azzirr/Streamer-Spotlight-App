@@ -13,6 +13,7 @@ export default function SubmissionForm(){
         streamingPlatform: '',
         description: ''
     });
+    
     function onDataChange(event){
         setStreamerData({...streamerData, [event.target.name]: event.target.value })
     }

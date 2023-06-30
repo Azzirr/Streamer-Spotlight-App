@@ -53,4 +53,19 @@ router.put('/streamer/:_id/vote', async (req, res) => {
   }
 })
 
+router.get("*", (req, res) => {
+  res.statusCode = 404;
+  res.send('Error. Endpoint not found!');
+});
+
+router.put("*", (req, res) => {
+  res.statusCode = 404;
+  res.send('Error. Endpoint not found!');
+});
+
+router.post("*", (req, res) => {
+  res.statusCode = 404;
+  res.send('Error. Endpoint not found!');
+});
+
 module.exports = router;

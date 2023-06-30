@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 require('dotenv').config();
 const streamersRoutes = require('./streamers_routes/routes');
-
+//Cors middleware
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT');
@@ -18,7 +18,11 @@ mongoose.connect(process.env.CONNECTION_STRING).then(() => {
     console.log(error);
 })
 
-app.post('/streamers', streamersRoutes);
 app.get('/streamers', streamersRoutes);
 app.get('/streamer/:_id', streamersRoutes);
 app.put('/streamer/:_id/vote', streamersRoutes);
+app.post('/streamers', streamersRoutes);
+// Wild card routes
+app.get('*', streamersRoutes);
+app.put('*', streamersRoutes);
+app.post('*', streamersRoutes);
